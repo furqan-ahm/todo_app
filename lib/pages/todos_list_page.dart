@@ -75,12 +75,13 @@ class _ToDoTileState extends State<ToDoTile> {
       elevation: 2,
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(15))),
       child: ListTile(
-      title: widget.task.title.text.make(),
-      subtitle: widget.task.isCompleted?'Completed'.text.make():'Incomplete'.text.make(),
-      onLongPress: (){
-        setState(() {
+        shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(15))),
+        title: widget.task.title.text.make(),
+        subtitle: widget.task.isCompleted?'Completed'.text.make():'Incomplete'.text.make(),
+        onLongPress: (){
+          setState(() {
           widget.task.isCompleted=!widget.task.isCompleted;
-        });
+          });
       },
     ),);
   }
